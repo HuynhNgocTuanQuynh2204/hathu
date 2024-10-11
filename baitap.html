@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hạ Thị Thu Hà_22NS.html</title>
+    <style>
+        /* Câu 2: CSS */
+        body {
+            background-color: lightblue; /* Đặt màu nền cho trang web */
+            font-family: 'Arial, sans-serif'; /* Đặt font chữ */
+        }
+
+        p {
+            color: #333333; /* Đặt màu chữ cho tất cả các đoạn văn */
+        }
+
+        .information, .navbar, section {
+            text-align: center; /* Căn chỉnh các mục theo yêu cầu */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRANG WEB CÁ NHÂN HẠ THỊ THU HÀ</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#hobbies">Sở thích</a></li>
+            <li><a href="#achievements">Thành tích</a></li>
+            <li><a href="#registration">Đăng ký thành viên</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <section class="information">
+        <div class="info=name">
+            <h1>Thông tin cá nhân</h1>
+            <p>Tên: Hạ Thị Thu Hà</p>
+            <p>Ngày, tháng, năm: 16/06/2004</p>
+            <p>Lớp hành chính: K59I2</p>
+        </div>
+        <div class="img">
+            <img src="https://img.hoidap247.com/picture/question/20200508/large_1588936738888.jpg" alt="Ảnh thẻ" width="150">
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Sở thích</h2>
+        <ul>
+            <li>Nghe nhạc</li>
+            <li>Chơi piano</li>
+            <li>Chơi thể thao</li>
+        </ul>
+        <button onclick="alert('Sở thích của bạn đã được hiển thị!')">Hiển thị sở thích</button>
+    </section>
+
+    <section id="achievements">
+        <h2>Thành tích</h2>
+        <p>1. GPA tính lũy: 3.22</p>
+        <p>2. Top 10 sinh viên có điểm trung bình cao nhất khối.</p>
+        <p>Ielts: 5.5</p>
+
+        <h3>Bảng điểm</h3>
+        <table border="1">
+            <tr>
+                <th>Môn</th>
+                <th>Điểm</th>
+            </tr>
+            <tr>
+                <td>Toán</td>
+                <td id="toan">8.8</td>
+            </tr>
+            <tr>
+                <td>Lý</td>
+                <td id="ly">9.0</td>
+            </tr>
+            <tr>
+                <td>Hóa</td>
+                <td id="hoa">8.75</td>
+            </tr>
+        </table>
+        <button onclick="tinhTongDiem()">Tính tổng điểm 3 môn</button>
+        <p id="tongDiem"></p>
+    </section>
+
+    <section id="registration">
+        <h2>Đăng ký thành viên</h2>
+        <form action="#">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: hakiuvs6@gmail.com</p>
+        <p>Điện thoại: 0123456789</p>
+        <p><a href="https://tmu.edu.vn" target="_blank">Trường đại học Thương mại</a></p>
+    </section>
+
+    <!-- Câu 3: JavaScript tính tổng điểm -->
+    <script>
+        function tinhTongDiem() {
+            var toan = parseFloat(document.getElementById('toan').textContent);
+            var ly = parseFloat(document.getElementById('ly').textContent);
+            var hoa = parseFloat(document.getElementById('hoa').textContent);
+            var tongDiem = toan + ly + hoa;
+            document.getElementById('tongDiem').textContent = 'Tổng điểm 3 môn: ' + tongDiem;
+        }
+    </script>
+</body>
+</html>
